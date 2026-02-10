@@ -1,17 +1,287 @@
 ---
-
+import '../styles/global.css';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/portfolio/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>AI Engineer Portfolio</title>
+    <meta name="description" content="AIエンジニアのポートフォリオサイト" />
+  </head>
+  <body class="bg-gradient-to-br from-gray-900 via-black to-gray-900 text-white overflow-x-hidden">
+    <!-- Animated Background -->
+    <div class="fixed inset-0 overflow-hidden pointer-events-none">
+      <div class="absolute top-20 left-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob"></div>
+      <div class="absolute top-40 right-10 w-72 h-72 bg-cyan-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-2000"></div>
+      <div class="absolute -bottom-8 left-20 w-72 h-72 bg-pink-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-4000"></div>
+    </div>
+
+    <div class="relative z-10">
+      <!-- Hero Section -->
+      <section class="min-h-screen flex items-center justify-center px-4">
+        <div class="max-w-6xl mx-auto text-center">
+          <div class="mb-8 animate-fade-in">
+            <span class="inline-block px-4 py-2 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-full text-sm font-semibold mb-6">
+              ✨ AI Engineer
+            </span>
+          </div>
+          
+          <h1 class="text-6xl md:text-8xl font-bold mb-6 animate-fade-in animation-delay-200">
+            <span class="bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent">
+              Building the Future
+            </span>
+          </h1>
+          
+          <p class="text-xl md:text-2xl text-gray-300 mb-12 max-w-3xl mx-auto animate-fade-in animation-delay-400">
+            人工知能とディープラーニングで世界を変える。<br />
+            最先端のAI技術で、未来をデザインします。
+          </p>
+          
+          <div class="flex gap-4 justify-center animate-fade-in animation-delay-600">
+            <a href="#projects" class="px-8 py-4 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-lg font-semibold hover:scale-105 transition-transform duration-200">
+              プロジェクトを見る
+            </a>
+            <a href="#contact" class="px-8 py-4 border-2 border-purple-500 rounded-lg font-semibold hover:bg-purple-500/10 transition-colors duration-200">
+              お問い合わせ
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Skills Section -->
+      <section id="skills" class="py-24 px-4">
+        <div class="max-w-6xl mx-auto">
+          <h2 class="text-5xl font-bold text-center mb-16">
+            <span class="bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
+              Tech Stack
+            </span>
+          </h2>
+          
+          <div class="grid md:grid-cols-3 gap-8">
+            <!-- AI/ML -->
+            <div class="group p-8 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-purple-500/50 transition-all duration-300 hover:scale-105">
+              <div class="text-4xl mb-4">🤖</div>
+              <h3 class="text-2xl font-bold mb-4 text-purple-400">AI / Machine Learning</h3>
+              <ul class="space-y-2 text-gray-300">
+                <li>• TensorFlow / PyTorch</li>
+                <li>• Large Language Models</li>
+                <li>• Computer Vision</li>
+                <li>• Natural Language Processing</li>
+              </ul>
+            </div>
+
+            <!-- Development -->
+            <div class="group p-8 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-cyan-500/50 transition-all duration-300 hover:scale-105">
+              <div class="text-4xl mb-4">💻</div>
+              <h3 class="text-2xl font-bold mb-4 text-cyan-400">Development</h3>
+              <ul class="space-y-2 text-gray-300">
+                <li>• Python / TypeScript</li>
+                <li>• React / Next.js</li>
+                <li>• Node.js / FastAPI</li>
+                <li>• Docker / Kubernetes</li>
+              </ul>
+            </div>
+
+            <!-- Cloud & MLOps -->
+            <div class="group p-8 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-pink-500/50 transition-all duration-300 hover:scale-105">
+              <div class="text-4xl mb-4">☁️</div>
+              <h3 class="text-2xl font-bold mb-4 text-pink-400">Cloud & MLOps</h3>
+              <ul class="space-y-2 text-gray-300">
+                <li>• AWS / GCP / Azure</li>
+                <li>• CI/CD Pipeline</li>
+                <li>• Model Deployment</li>
+                <li>• Monitoring & Logging</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Projects Section -->
+      <section id="projects" class="py-24 px-4">
+        <div class="max-w-6xl mx-auto">
+          <h2 class="text-5xl font-bold text-center mb-16">
+            <span class="bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
+              Featured Projects
+            </span>
+          </h2>
+          
+          <div class="grid md:grid-cols-2 gap-8">
+            <!-- Project 1 -->
+            <div class="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-purple-500/10 to-cyan-500/10 border border-white/10 hover:border-purple-500/50 transition-all duration-300">
+              <div class="p-8">
+                <div class="flex items-center gap-3 mb-4">
+                  <div class="w-12 h-12 rounded-lg bg-gradient-to-br from-purple-500 to-purple-600 flex items-center justify-center text-2xl">
+                    🎯
+                  </div>
+                  <h3 class="text-2xl font-bold">AI チャットボット</h3>
+                </div>
+                <p class="text-gray-300 mb-6">
+                  大規模言語モデルを活用した、カスタマーサポート向けの高度なAIチャットボット。自然な会話と高い問題解決率を実現。
+                </p>
+                <div class="flex flex-wrap gap-2">
+                  <span class="px-3 py-1 bg-purple-500/20 rounded-full text-sm">GPT-4</span>
+                  <span class="px-3 py-1 bg-purple-500/20 rounded-full text-sm">FastAPI</span>
+                  <span class="px-3 py-1 bg-purple-500/20 rounded-full text-sm">React</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-cyan-500/10 to-pink-500/10 border border-white/10 hover:border-cyan-500/50 transition-all duration-300">
+              <div class="p-8">
+                <div class="flex items-center gap-3 mb-4">
+                  <div class="w-12 h-12 rounded-lg bg-gradient-to-br from-cyan-500 to-cyan-600 flex items-center justify-center text-2xl">
+                    👁️
+                  </div>
+                  <h3 class="text-2xl font-bold">画像認識システム</h3>
+                </div>
+                <p class="text-gray-300 mb-6">
+                  ディープラーニングを用いた高精度な画像認識システム。製造業の品質管理で99.5%の精度を達成。
+                </p>
+                <div class="flex flex-wrap gap-2">
+                  <span class="px-3 py-1 bg-cyan-500/20 rounded-full text-sm">PyTorch</span>
+                  <span class="px-3 py-1 bg-cyan-500/20 rounded-full text-sm">OpenCV</span>
+                  <span class="px-3 py-1 bg-cyan-500/20 rounded-full text-sm">AWS</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-pink-500/10 to-purple-500/10 border border-white/10 hover:border-pink-500/50 transition-all duration-300">
+              <div class="p-8">
+                <div class="flex items-center gap-3 mb-4">
+                  <div class="w-12 h-12 rounded-lg bg-gradient-to-br from-pink-500 to-pink-600 flex items-center justify-center text-2xl">
+                    📊
+                  </div>
+                  <h3 class="text-2xl font-bold">予測分析プラットフォーム</h3>
+                </div>
+                <p class="text-gray-300 mb-6">
+                  時系列データを分析し、ビジネスの需要を予測するAIプラットフォーム。在庫管理の最適化を実現。
+                </p>
+                <div class="flex flex-wrap gap-2">
+                  <span class="px-3 py-1 bg-pink-500/20 rounded-full text-sm">TensorFlow</span>
+                  <span class="px-3 py-1 bg-pink-500/20 rounded-full text-sm">Next.js</span>
+                  <span class="px-3 py-1 bg-pink-500/20 rounded-full text-sm">PostgreSQL</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Project 4 -->
+            <div class="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-cyan-500/10 to-purple-500/10 border border-white/10 hover:border-cyan-500/50 transition-all duration-300">
+              <div class="p-8">
+                <div class="flex items-center gap-3 mb-4">
+                  <div class="w-12 h-12 rounded-lg bg-gradient-to-br from-cyan-500 to-purple-600 flex items-center justify-center text-2xl">
+                    🎨
+                  </div>
+                  <h3 class="text-2xl font-bold">生成AIアプリ</h3>
+                </div>
+                <p class="text-gray-300 mb-6">
+                  Stable DiffusionとGPT-4を組み合わせた、テキストから画像を生成し編集できるクリエイティブツール。
+                </p>
+                <div class="flex flex-wrap gap-2">
+                  <span class="px-3 py-1 bg-cyan-500/20 rounded-full text-sm">Stable Diffusion</span>
+                  <span class="px-3 py-1 bg-cyan-500/20 rounded-full text-sm">GPT-4</span>
+                  <span class="px-3 py-1 bg-cyan-500/20 rounded-full text-sm">TypeScript</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section id="contact" class="py-24 px-4 mb-24">
+        <div class="max-w-4xl mx-auto text-center">
+          <h2 class="text-5xl font-bold mb-8">
+            <span class="bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
+              Let's Work Together
+            </span>
+          </h2>
+          
+          <p class="text-xl text-gray-300 mb-12">
+            AIプロジェクトのご相談、お仕事のご依頼など<br />
+            お気軽にお問い合わせください。
+          </p>
+          
+          <div class="flex gap-6 justify-center">
+            <a href="https://github.com/kentarou-tenki" target="_blank" rel="noopener noreferrer" 
+               class="w-16 h-16 rounded-full bg-white/5 border border-white/10 hover:border-purple-500/50 flex items-center justify-center text-2xl hover:scale-110 transition-transform duration-200">
+              💻
+            </a>
+            <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer"
+               class="w-16 h-16 rounded-full bg-white/5 border border-white/10 hover:border-cyan-500/50 flex items-center justify-center text-2xl hover:scale-110 transition-transform duration-200">
+              🐦
+            </a>
+            <a href="mailto:contact@example.com"
+               class="w-16 h-16 rounded-full bg-white/5 border border-white/10 hover:border-pink-500/50 flex items-center justify-center text-2xl hover:scale-110 transition-transform duration-200">
+              ✉️
+            </a>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <style>
+      @keyframes blob {
+        0%, 100% {
+          transform: translate(0, 0) scale(1);
+        }
+        33% {
+          transform: translate(30px, -50px) scale(1.1);
+        }
+        66% {
+          transform: translate(-20px, 20px) scale(0.9);
+        }
+      }
+
+      @keyframes fade-in {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .animate-blob {
+        animation: blob 7s infinite;
+      }
+
+      .animation-delay-2000 {
+        animation-delay: 2s;
+      }
+
+      .animation-delay-4000 {
+        animation-delay: 4s;
+      }
+
+      .animate-fade-in {
+        animation: fade-in 1s ease-out forwards;
+        opacity: 0;
+      }
+
+      .animation-delay-200 {
+        animation-delay: 0.2s;
+      }
+
+      .animation-delay-400 {
+        animation-delay: 0.4s;
+      }
+
+      .animation-delay-600 {
+        animation-delay: 0.6s;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
+  </body>
 </html>
